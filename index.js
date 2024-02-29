@@ -1,29 +1,27 @@
-// Code your solution in this file!
-const returnFirstTwoDrivers = function(drivers) {
-    return drivers.slice(0, 2);
-}
 
 const allDrivers = ['Antonia', 'Nuru', 'Amari', 'Mo'];
-const firstTwoDrivers = returnFirstTwoDrivers(allDrivers);
 
-const returnLastTwoDrivers = function(drivers) {
-    return drivers.slice(2, 4);
+const returnFirstTwoDrivers = function(drivers) {
+    return drivers.slice(0,2);
 }
 
-const lastTwoDrivers = returnLastTwoDrivers(allDrivers);
+const returnLastTwoDrivers = function(drivers) {
+    return drivers.slice(2,4);
+}
 
 const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
 
-const createFareMultiplier = function(integer) {
+const createFareMultiplier = function(numb) {
     return function(fare) {
-        return fare * integer;
-    };
+        return fare * numb;
+    }
 }
 
 const fareDoubler = createFareMultiplier(2);
-
 const fareTripler = createFareMultiplier(3);
 
-function selectDifferentDrivers(drivers, selectFunction) {
+
+const selectDifferentDrivers = function(drivers, selectFunction) {
     return selectFunction(drivers);
-};
+}
+
